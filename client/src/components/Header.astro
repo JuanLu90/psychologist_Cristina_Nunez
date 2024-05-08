@@ -1,14 +1,31 @@
 ---
-console.log("javascript");
+// No JavaScript here
 ---
 
-<header class="py-8 px-4 mx-auto max-m-xl lg:py-16 lg:px-6 text-white">
-  HEADER
-
-  <nav
-    class="flex flex-col items-center justify-between w-full text-center md:flex-row"
-  >
-    <a>Info</a>
-    <a href="/contact">Contacto</a>
-  </nav>
+<header class="flex justify-between items-center p-6">
+  <div class="icon">Icon</div>
+  <div class="title text-center flex-grow">
+    <a href="/"> Cristina Nuñez</a>
+  </div>
+  <div class="menu">
+    <button id="menuButton" class="hamburger lg:hidden">☰</button>
+    <nav
+      id="menuLinks"
+      class="flex flex-col lg:flex gap-4 absolute right-0 p-6 hidden"
+    >
+      <a href="/about">About Me</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </div>
 </header>
+
+<script>
+  window.addEventListener("DOMContentLoaded", (event) => {
+    const menuButton = document.getElementById("menuButton");
+    const menuLinks = document.getElementById("menuLinks");
+
+    menuButton?.addEventListener("click", () => {
+      menuLinks?.classList.toggle("hidden");
+    });
+  });
+</script>
