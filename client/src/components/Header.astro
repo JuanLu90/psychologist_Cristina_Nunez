@@ -1,26 +1,23 @@
 ---
-// No JavaScript here
+import HamburgerIcon from "../icons/hamburger.astro";
 ---
 
 <header class="flex justify-between items-center p-6">
-  <div class="icon">Icon</div>
-  <div class="title text-center flex-grow">
+  <div class="title flex-grow">
     <a href="/"> Cristina Nuñez</a>
   </div>
-  <div class="menu">
-    <button id="menuButton" class="hamburger lg:hidden">☰</button>
-    <nav
-      id="menuLinks"
-      class="flex flex-col lg:flex gap-4 absolute right-0 p-6 hidden"
-    >
-      <a href="/about">About Me</a>
-      <a href="/contact">Contact</a>
-    </nav>
-  </div>
+  <HamburgerIcon id="menuButton" class="lg:hidden" />
+  <nav
+    id="menuLinks"
+    class="hidden lg:flex lg:flex-row gap-4 right-0 menuLinks"
+  >
+    <a href="/about">About Me</a>
+    <a href="/contact">Contact</a>
+  </nav>
 </header>
 
 <script>
-  window.addEventListener("DOMContentLoaded", (event) => {
+  window.addEventListener("DOMContentLoaded", () => {
     const menuButton = document.getElementById("menuButton");
     const menuLinks = document.getElementById("menuLinks");
 
@@ -29,3 +26,22 @@
     });
   });
 </script>
+
+<style>
+  header {
+    background-color: rgb(216, 227, 205);
+  }
+
+  @media (max-width: 1024px) {
+    .menuLinks {
+      @apply absolute;
+      top: 72px;
+      background-color: rgb(216, 227, 205);
+
+      a {
+        display: block;
+        @apply m-4;
+      }
+    }
+  }
+</style>
