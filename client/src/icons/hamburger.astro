@@ -1,5 +1,10 @@
 ---
 const { class: className, id } = Astro.props;
+
+interface Props {
+  class: string;
+  id: string;
+}
 ---
 
 <svg width="20" viewBox="0 0 448 512" class:list={className} id={id}
