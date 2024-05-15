@@ -1,7 +1,41 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import PhoneIcon from "../icons/phone.astro";
 ---
 
-<Layout title="contact">
-  <div>CONTACTO</div>
+<Layout title="Contacto - Cristina Nuñez Parra">
+  <div class="m-6">
+    <div class="imageWrapper">
+      <img src="/img/portada.png" alt="" />
+    </div>
+    <div>
+      <h3 class="font-bold mt-4">
+        Soy Cristina Nuñez, Psicóloga General Sanitaria y Terapeuta Familiar y
+        de pareja y quiero darte la bienvenida a este refugio que he creado con
+        todo mi cariño.
+      </h3>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod deleniti
+        odio suscipit, consectetur maxime, in enim ex labore maiores quo commodi
+        quaerat odit ullam hic, nihil earum. Vel, veniam mollitia?
+      </p>
+    </div>
+    <div>
+      <ul>
+        <li>dasd</li>
+        <li>
+          <a href="tel:+34627112391" class="font-bold flex">
+            <span class="mr-2"> <PhoneIcon /> </span>
+            <span> +34 627 11 23 91 </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </Layout>
+
+<style>
+  .imageWrapper {
+    border: 15px solid rgb(255, 245, 224);
+  }
+</style>

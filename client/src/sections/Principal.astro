@@ -3,7 +3,7 @@ import ButtonContact from "../components/ButtonContact.astro";
 ---
 
 <div
-  class="h-screen lg:h-[80vh] text-white p-8 flex flex-col justify-end principalWrapper"
+  class="lg:h-[60vh] text-white p-8 flex flex-col justify-end principalWrapper"
 >
   <h1 class="text-5xl font-bold mb-5">Texto de prueba</h1>
   <p class="mb-8">
@@ -20,5 +20,11 @@ import ButtonContact from "../components/ButtonContact.astro";
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
+  }
+
+  @media (max-width: 1024px) {
+    .principalWrapper {
+      height: calc(100vh - 64px);
+    }
   }
 </style>
