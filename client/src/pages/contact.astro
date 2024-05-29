@@ -1,6 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import PhoneIcon from "../icons/phone.astro";
+import Mail from "../icons/mail.astro";
+
+import { colors } from "../util";
+const { secondary } = colors;
 ---
 
 <Layout title="Contacto - Cristina Nuñez Parra">
@@ -9,20 +13,29 @@ import PhoneIcon from "../icons/phone.astro";
       <img src="/img/portada.png" alt="" />
     </div>
     <div>
-      <h3 class="font-bold mt-4">
+      <h3 class="font-bold mt-5">
         Soy Cristina Nuñez, Psicóloga General Sanitaria y Terapeuta Familiar y
         de pareja y quiero darte la bienvenida a este refugio que he creado con
         todo mi cariño.
       </h3>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod deleniti
-        odio suscipit, consectetur maxime, in enim ex labore maiores quo commodi
-        quaerat odit ullam hic, nihil earum. Vel, veniam mollitia?
+      <p class="my-4">
+        Estás a solo un paso de comenzar un viaje transformador hacia el
+        bienestar emocional, tanto para ti como para tus seres queridos, o
+        incluso para tu desarrollo profesional como psicólogo. Aquí encontrarás
+        todas las formas en las que puedes comunicarte conmigo para iniciar este
+        importante camino. Estamos deseando escucharte y ser parte de tu camino
+        hacia un bienestar emocional y psicológico más completo. No lo pospongas
+        más, tu salud emocional es lo más valioso que tienes.
       </p>
     </div>
     <div>
-      <ul>
-        <li>dasd</li>
+      <ul class="mt-6 [&>*]:my-3">
+        <li>
+          <a href="tel:+34627112391" class="font-bold flex">
+            <span class="mr-2"> <Mail /> </span>
+            <span> nparracristina@gmail.com</span>
+          </a>
+        </li>
         <li>
           <a href="tel:+34627112391" class="font-bold flex">
             <span class="mr-2"> <PhoneIcon /> </span>
@@ -34,8 +47,8 @@ import PhoneIcon from "../icons/phone.astro";
   </div>
 </Layout>
 
-<style>
+<style define:vars={{ secondary }}>
   .imageWrapper {
-    border: 15px solid rgb(255, 245, 224);
+    border: 15px solid var(--secondary);
   }
 </style>

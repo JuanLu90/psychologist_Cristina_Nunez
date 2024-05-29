@@ -1,9 +1,12 @@
 ---
 import LinkedinIcon from "../icons/linkedin.astro";
 import WhatsappIcon from "../icons/whatsapp.astro";
+
+import { colors } from "../util";
+const { primary } = colors;
 ---
 
-<footer>
+<footer class="p-4">
   <div class="wrapper-socialmedia">
     <WhatsappIcon />
     <LinkedinIcon />
@@ -17,14 +20,26 @@ import WhatsappIcon from "../icons/whatsapp.astro";
   </div>
 
   <hr />
-
-  <p>
-    © Cristina Nuñez Parra 2024 | Todos los derechos reservados | Web y diseño
-    por Juan Luis Moreno Calderón
-  </p>
+  <div class="[&>*]:block">
+    <span class="text-center m-3">Todos los derechos reservados</span>
+    <span class="text-center m-3"> © 2024 Cristina Nuñez Parra </span>
+    <span class="text-right mt-5 text-sm">
+      Creado por <a
+        href="https://www.linkedin.com/in/juanlumoreno/"
+        target="_blank"
+        class="underline text-blue-700"
+        rel="noopener noreferrer"
+      >
+        Juan Luis Moreno Calderón
+      </a></span
+    >
+  </div>
 </footer>
 
-<style>
+<style define:vars={{ primary }}>
+  footer {
+    background-color: var(--primary);
+  }
   .wrapper-socialmedia {
     display: flex;
     justify-content: center;
@@ -32,11 +47,6 @@ import WhatsappIcon from "../icons/whatsapp.astro";
     svg {
       margin: 7px;
     }
-  }
-
-  p {
-    margin: 7px;
-    text-align: center;
   }
 
   .wrapper-contact {

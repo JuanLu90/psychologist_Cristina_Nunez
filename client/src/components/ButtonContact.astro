@@ -1,5 +1,6 @@
 ---
-
+import { colors } from "../util";
+const { primary } = colors;
 ---
 
 <div>
@@ -10,8 +11,8 @@
   >
 </div>
 
-<style>
+<style define:vars={{ primary }}>
   a {
-    background-color: rgb(216, 227, 205);
+    background-color: var(--primary);
   }
 </style>

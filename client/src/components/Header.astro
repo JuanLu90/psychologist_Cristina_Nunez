@@ -1,5 +1,8 @@
 ---
 import HamburgerIcon from "../icons/hamburger.astro";
+
+import { colors } from "../util";
+const { primary } = colors;
 ---
 
 <header class="flex justify-between items-center p-6">
@@ -27,16 +30,16 @@ import HamburgerIcon from "../icons/hamburger.astro";
   });
 </script>
 
-<style>
+<style define:vars={{ primary }}>
   header {
-    background-color: rgb(216, 227, 205);
+    background-color: var(--primary);
   }
 
   @media (max-width: 1024px) {
     .menuLinks {
       @apply absolute;
       top: 72px;
-      background-color: rgb(216, 227, 205);
+      background-color: var(--primary);
 
       a {
         display: block;
