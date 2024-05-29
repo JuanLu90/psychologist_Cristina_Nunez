@@ -1,0 +1,63 @@
+---
+import { colors } from "../util";
+const { primary } = colors;
+---
+
+<div class="w-full max-w-sm m-auto py-6">
+  <h2 class="my-5 text-xl font-bold">Formulario de contacto</h2>
+  <form>
+    <input id="name" type="text" placeholder="Nombre" />
+    <input
+      id="surnames"
+      type="text"
+      placeholder="Apellidos"
+      class="focus:outline-none focus:shadow-outline"
+    />
+    <input id="email" type="text" placeholder="Correo electrónico" />
+    <input id="phone" type="text" placeholder="Teléfono" />
+    <textarea id="reason" rows="4" placeholder="Motivo de consulta"></textarea>
+    <textarea id="availability" rows="2" placeholder="Disponibilidad horaria"
+    ></textarea>
+
+    <div class="flex items-center mb-5">
+      <input
+        id="link-checkbox"
+        type="checkbox"
+        value=""
+        class="w-4 h-4 border-gray-300 rounded"
+      />
+      <label for="link-checkbox" class="ms-2 text-sm font-medium"
+        >He leído y acepto los <a
+          href="#"
+          class="text-blue-600 dark:text-blue-500 hover:underline"
+          >términos y condiciones</a
+        >.</label
+      >
+    </div>
+
+    <div class="flex items-center justify-between">
+      <button
+        class="bg-green-300 hover:bg-green-400 font-bold py-3 px-5 rounded focus:outline-none focus:shadow-outline"
+        type="submit"
+      >
+        Sign In
+      </button>
+    </div>
+  </form>
+</div>
+
+<style define:vars={{ primary }}>
+  form input[type="text"],
+  textarea {
+    @apply mb-4 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight;
+  }
+
+  form input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5); /* Replace with your desired shadow */
+  }
+
+  button {
+    background-color: var(--primary);
+  }
+</style>

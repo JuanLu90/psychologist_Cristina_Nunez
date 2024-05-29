@@ -2,17 +2,18 @@
 import Layout from "../layouts/Layout.astro";
 import PhoneIcon from "../icons/phone.astro";
 import Mail from "../icons/mail.astro";
+import ContactForm from "../components/ContactForm.astro";
 
 import { colors } from "../util";
 const { secondary } = colors;
 ---
 
 <Layout title="Contacto - Cristina Nuñez Parra">
-  <div class="m-6">
-    <div class="imageWrapper">
+  <div class="mt-6">
+    <div class="imageWrapper mx-5">
       <img src="/img/portada.png" alt="" />
     </div>
-    <div>
+    <div class="mx-5">
       <h3 class="font-bold mt-5">
         Soy Cristina Nuñez, Psicóloga General Sanitaria y Terapeuta Familiar y
         de pareja y quiero darte la bienvenida a este refugio que he creado con
@@ -28,7 +29,7 @@ const { secondary } = colors;
         más, tu salud emocional es lo más valioso que tienes.
       </p>
     </div>
-    <div>
+    <div class="m-5">
       <ul class="mt-6 [&>*]:my-3">
         <li>
           <a href="mailto:nparracristina@gmail.com" class="font-bold flex">
@@ -44,11 +45,18 @@ const { secondary } = colors;
         </li>
       </ul>
     </div>
+    <div class="wrapperContactForm">
+      <ContactForm />
+    </div>
   </div>
 </Layout>
 
 <style define:vars={{ secondary }}>
   .imageWrapper {
     border: 15px solid var(--secondary);
+  }
+
+  .wrapperContactForm {
+    background-color: var(--secondary);
   }
 </style>
