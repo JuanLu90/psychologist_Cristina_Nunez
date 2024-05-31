@@ -1,11 +1,13 @@
 ---
 import { colors } from "../util";
 const { primary } = colors;
+
+const FORMSPREE_URL = import.meta.env.FORMSPREE_URL;
 ---
 
 <div class="w-full max-w-sm m-auto py-6">
   <h2 class="my-5 text-xl font-bold">Formulario de contacto</h2>
-  <form id="myForm" action="https://formspree.io/f/xdoqrkdz" method="POST">
+  <form id="myForm" action={FORMSPREE_URL} method="POST">
     <input id="name" name="name" type="text" placeholder="Nombre" required />
     <input
       id="surnames"
