@@ -5,19 +5,40 @@ const { primary } = colors;
 
 <div class="w-full max-w-sm m-auto py-6">
   <h2 class="my-5 text-xl font-bold">Formulario de contacto</h2>
-  <form>
-    <input id="name" type="text" placeholder="Nombre" />
+  <form id="myForm" action="https://formspree.io/f/xdoqrkdz" method="POST">
+    <input id="name" name="name" type="text" placeholder="Nombre" required />
     <input
       id="surnames"
+      name="surnames"
       type="text"
       placeholder="Apellidos"
       class="focus:outline-none focus:shadow-outline"
+      required
     />
-    <input id="email" type="text" placeholder="Correo electrónico" />
-    <input id="phone" type="text" placeholder="Teléfono" />
-    <textarea id="reason" rows="4" placeholder="Motivo de consulta"></textarea>
-    <textarea id="availability" rows="2" placeholder="Disponibilidad horaria"
-    ></textarea>
+    <input
+      id="email"
+      type="text"
+      name="email"
+      placeholder="Correo electrónico"
+      required
+    />
+    <input
+      id="phone"
+      type="text"
+      name="phone"
+      placeholder="Teléfono"
+      required
+    />
+    <textarea
+      id="reason"
+      name="reason"
+      rows="4"
+      placeholder="Motivo de consulta"></textarea>
+    <textarea
+      id="availability"
+      name="availability"
+      rows="2"
+      placeholder="Disponibilidad horaria"></textarea>
 
     <div class="flex items-center mb-5">
       <input
@@ -25,6 +46,7 @@ const { primary } = colors;
         type="checkbox"
         value=""
         class="w-4 h-4 border-gray-300 rounded"
+        required
       />
       <label for="link-checkbox" class="ms-2 text-sm font-medium"
         >He leído y acepto los <a
@@ -42,6 +64,9 @@ const { primary } = colors;
       >
         Sign In
       </button>
+    </div>
+    <div class="mt-5 p-4 bg-green-200 hidden" id="wrapperStatusForm">
+      <p id="statusForm"></p>
     </div>
   </form>
 </div>
@@ -61,3 +86,43 @@ const { primary } = colors;
     background-color: var(--primary);
   }
 </style>
+
+<script>
+  const myForm = document.getElementById("myForm");
+  const statusElement = document.getElementById("statusForm");
+  const wrapperStatusElement = document.getElementById("wrapperStatusForm");
+
+  function handleResponse(
+    xhr: XMLHttpRequest,
+    form: HTMLFormElement,
+    statusElement: HTMLElement,
+    wrapperStatusElement: HTMLElement
+  ) {
+    if (xhr.readyState !== XMLHttpRequest.DONE) return;
+    if (xhr.status === 200) {
+      form.reset();
+      statusElement.textContent =
+        "Gracias por tu solicitud. Me pondré en contacto contigo lo antes posible.";
+    } else {
+      statusElement.textContent =
+        "Ha habido un error al enviar el formulario. Por favor, inténtalo de nuevo.";
+    }
+    wrapperStatusElement.classList.remove("hidden");
+  }
+
+  if (myForm) {
+    myForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      const form = event.target as HTMLFormElement;
+      const data = new FormData(form);
+      console.log("data", data);
+      const xhr = new XMLHttpRequest();
+      console.log("xhr", xhr);
+      xhr.open(form.method, form.action);
+      xhr.setRequestHeader("Accept", "application/json");
+      xhr.onreadystatechange = () =>
+        handleResponse(xhr, form, statusElement!, wrapperStatusElement!);
+      xhr.send(data);
+    });
+  }
+</script>
