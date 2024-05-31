@@ -8,44 +8,48 @@ import { colors } from "../util";
 const { secondary } = colors;
 ---
 
-<Layout title="Contacto - Cristina Nuñez Parra">
+<Layout title="Contacto - Psicóloga - Cristina Nuñez Parra">
   <div class="mt-6">
-    <div class="imageWrapper mx-5">
-      <img src="/img/portada.png" alt="" />
+    <div class="flex flex-col md:flex-row mx-5">
+      <div class="imageWrapper w-full md:w-1/2">
+        <img src="/img/portada.png" alt="" class="w-full h-auto" />
+      </div>
+      <div class="w-full md:w-1/2 md:mx-12 flex flex-col justify-center">
+        <h3 class="font-bold mt-5">
+          Soy Cristina Nuñez, Psicóloga General Sanitaria y Terapeuta Familiar y
+          de pareja y quiero darte la bienvenida a este refugio que he creado
+          con todo mi cariño.
+        </h3>
+        <p class="my-4">
+          Estás a solo un paso de comenzar un viaje transformador hacia el
+          bienestar emocional, tanto para ti como para tus seres queridos, o
+          incluso para tu desarrollo profesional como psicólogo. Aquí
+          encontrarás todas las formas en las que puedes comunicarte conmigo
+          para iniciar este importante camino. Estamos deseando escucharte y ser
+          parte de tu camino hacia un bienestar emocional y psicológico más
+          completo. No lo pospongas más, tu salud emocional es lo más valioso
+          que tienes.
+        </p>
+        <div class="mb-5 w-full">
+          <ul class="mt-6 [&>*]:my-3">
+            <li>
+              <a href="mailto:nparracristina@gmail.com" class="font-bold flex">
+                <span class="mr-2"> <Mail /> </span>
+                <span> nparracristina@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <a href="tel:+34627112391" class="font-bold flex">
+                <span class="mr-2"> <PhoneIcon /> </span>
+                <span> +34 627 11 23 91 </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="mx-5">
-      <h3 class="font-bold mt-5">
-        Soy Cristina Nuñez, Psicóloga General Sanitaria y Terapeuta Familiar y
-        de pareja y quiero darte la bienvenida a este refugio que he creado con
-        todo mi cariño.
-      </h3>
-      <p class="my-4">
-        Estás a solo un paso de comenzar un viaje transformador hacia el
-        bienestar emocional, tanto para ti como para tus seres queridos, o
-        incluso para tu desarrollo profesional como psicólogo. Aquí encontrarás
-        todas las formas en las que puedes comunicarte conmigo para iniciar este
-        importante camino. Estamos deseando escucharte y ser parte de tu camino
-        hacia un bienestar emocional y psicológico más completo. No lo pospongas
-        más, tu salud emocional es lo más valioso que tienes.
-      </p>
-    </div>
-    <div class="m-5">
-      <ul class="mt-6 [&>*]:my-3">
-        <li>
-          <a href="mailto:nparracristina@gmail.com" class="font-bold flex">
-            <span class="mr-2"> <Mail /> </span>
-            <span> nparracristina@gmail.com</span>
-          </a>
-        </li>
-        <li>
-          <a href="tel:+34627112391" class="font-bold flex">
-            <span class="mr-2"> <PhoneIcon /> </span>
-            <span> +34 627 11 23 91 </span>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class="wrapperContactForm">
+
+    <div class="wrapperContactForm mt-5">
       <ContactForm />
     </div>
   </div>
