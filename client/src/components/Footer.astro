@@ -6,8 +6,8 @@ import { colors } from "../util";
 const { primary } = colors;
 ---
 
-<footer class="p-4">
-  <div class="wrapper-socialmedia">
+<footer class="p-6">
+  <div class="wrapper-socialmedia gap-2">
     <WhatsappIcon />
     <LinkedinIcon />
   </div>
@@ -19,11 +19,21 @@ const { primary } = colors;
   </div>
 
   <hr />
-  <div class="[&>*]:block">
-    <span class="text-center m-3">Todos los derechos reservados</span>
-    <span class="text-center m-3"> &copy; 2024 Cristina Nuñez Parra </span>
-    <span class="text-right mt-5 text-sm">
-      Creado por <a
+
+  <div class="flex flex-col md:flex-row-reverse justify-between my-8">
+    <ul class="md:flex text-center gap-4 [&>li]:mb-2 [&>li]:md:mb-0">
+      <li><a href="/politica-de-privacidad">Política de privacidad</a></li>
+      <li><a href="/aviso-legal">Aviso legal</a></li>
+      <li><a href="/politica-de-cookies">Política de cookies</a></li>
+    </ul>
+    <span class="text-center mt-6 md:mt-0"> © 2024 Cristina Nuñez Parra </span>
+  </div>
+
+  <hr />
+
+  <div class="text-right">
+    <span class="text-sm">
+      Web desarrollada por <a
         href="https://www.linkedin.com/in/juanlumoreno/"
         target="_blank"
         class="underline text-blue-700"
