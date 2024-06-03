@@ -12,21 +12,24 @@ const { primary, secondary } = colors;
   <HamburgerIcon id="menuButton" class="lg:hidden" />
   <nav
     id="menuLinks"
-    class="hidden lg:flex lg:flex-row gap-4 right-0 menuLinks"
+    class="hidden lg:flex lg:flex-row right-0 absolute menuLinks w-full md:w-auto text-center py-6"
   >
-    <a href="/contact">Contact</a>
+    <a href="/#" class="m-8">Método</a>
+    <a href="/contact" class="m-8">Contacto</a>
   </nav>
 </header>
 
 <script>
-  window.addEventListener("DOMContentLoaded", () => {
+  function setupMenu() {
     const menuButton = document.getElementById("menuButton");
     const menuLinks = document.getElementById("menuLinks");
 
     menuButton?.addEventListener("click", () => {
       menuLinks?.classList.toggle("hidden");
     });
-  });
+  }
+
+  window.addEventListener("DOMContentLoaded", setupMenu);
 </script>
 
 <style define:vars={{ primary, secondary }}>
@@ -34,19 +37,23 @@ const { primary, secondary } = colors;
     background-color: var(--primary);
 
     img {
-      max-width: 250px;
+      max-width: 200px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      img {
+        max-width: 350px;
+      }
     }
   }
 
   @media (max-width: 1024px) {
     .menuLinks {
-      @apply absolute;
-      top: 72px;
-      background-color: var(--primary);
+      top: 101px;
+      background-color: var(--secondary);
 
       a {
         display: block;
-        @apply m-4;
       }
     }
   }
