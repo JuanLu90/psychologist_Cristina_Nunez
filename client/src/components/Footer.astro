@@ -3,10 +3,13 @@ import LinkedinIcon from "../icons/linkedin.astro";
 import WhatsappIcon from "../icons/whatsapp.astro";
 
 import { colors } from "../util";
-const { primary } = colors;
+const { primary, secondary } = colors;
 ---
 
 <footer class="p-6">
+  <div class="mb-6">
+    <img src="/img/logo.png" alt="" class="w-full h-auto m-auto" />
+  </div>
   <div class="wrapper-socialmedia gap-2">
     <WhatsappIcon />
     <LinkedinIcon />
@@ -14,13 +17,15 @@ const { primary } = colors;
 
   <hr />
 
-  <div class="wrapper-contact">
+  <div class="wrapper-contact text-center font-bold">
     <a href="/contact">CONTACTO</a>
   </div>
 
   <hr />
 
-  <div class="flex flex-col md:flex-row-reverse justify-between my-8">
+  <div
+    class="flex flex-col md:flex-row-reverse justify-between my-8 wrapper-links font-bold"
+  >
     <ul class="md:flex text-center gap-4 [&>li]:mb-2 [&>li]:md:mb-0">
       <li><a href="/politica-de-privacidad">Política de privacidad</a></li>
       <li><a href="/aviso-legal">Aviso legal</a></li>
@@ -31,7 +36,7 @@ const { primary } = colors;
 
   <hr />
 
-  <div class="text-right">
+  <div class="text-right mt-8">
     <span class="text-sm">
       Web desarrollada por <a
         href="https://www.linkedin.com/in/juanlumoreno/"
@@ -45,9 +50,19 @@ const { primary } = colors;
   </div>
 </footer>
 
-<style define:vars={{ primary }}>
+<style define:vars={{ primary, secondary }}>
   footer {
     background-color: var(--primary);
+
+    img {
+      max-width: 400px;
+    }
+
+    @media screen and (max-width: 1024px) {
+      img {
+        max-width: 250px;
+      }
+    }
   }
   .wrapper-socialmedia {
     display: flex;
@@ -58,14 +73,8 @@ const { primary } = colors;
     }
   }
 
-  .wrapper-contact {
-    margin: 7px;
-    text-align: center;
-
-    a {
-      margin: 7px;
-      display: block;
-      font-weight: bold;
-    }
+  .wrapper-contact,
+  .wrapper-links {
+    color: var(--secondary);
   }
 </style>

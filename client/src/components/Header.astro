@@ -2,12 +2,12 @@
 import HamburgerIcon from "../icons/hamburger.astro";
 
 import { colors } from "../util";
-const { primary } = colors;
+const { primary, secondary } = colors;
 ---
 
-<header class="flex justify-between items-center p-6">
-  <div class="title flex-grow">
-    <a href="/"> Cristina Nuñez</a>
+<header class="flex justify-between items-center p-4">
+  <div class="title flex-grow font-bold">
+    <a href="/"> <img src="/img/logo.png" alt="" class="w-full h-auto" /> </a>
   </div>
   <HamburgerIcon id="menuButton" class="lg:hidden" />
   <nav
@@ -29,9 +29,19 @@ const { primary } = colors;
   });
 </script>
 
-<style define:vars={{ primary }}>
+<style define:vars={{ primary, secondary }}>
   header {
     background-color: var(--primary);
+
+    img {
+      max-width: 400px;
+    }
+
+    @media screen and (max-width: 1024px) {
+      img {
+        max-width: 250px;
+      }
+    }
   }
 
   @media (max-width: 1024px) {
