@@ -6,34 +6,37 @@ const { primary, secondary } = colors;
 ---
 
 <header class="p-4">
-  <div class="flex items-center justify-between w-full md:w-3/4 m-auto">
-    <div class="font-bold">
-      <a href="/">
-        <img src="/img/logo.png" alt="" class="w-full h-auto" />
-      </a>
-    </div>
-    <HamburgerIcon id="menuButton" class="lg:hidden" />
-    <nav
-      id="menuLinks"
-      class="hidden absolute md:static lg:flex lg:flex-row right-0 menuLinks w-full md:w-auto text-center py-6"
+  <nav class="flex justify-between items-center w-full md:w-3/4 m-auto">
+    <a href="/" class="nav-logo"
+      ><img src="/img/logo.png" alt="" class="w-full h-auto" /></a
     >
-      <a href="/modelo-terapeutico" class="m-8">Modelo terapéutico</a>
-      <a href="/contact" class="m-8">Contacto</a>
-    </nav>
-  </div>
+
+    <ul
+      class="nav-menu absolute p-8 md:p-0 md:gap-24 md:static flex flex-col md:flex-row w-full md:w-auto text-center left-[-100%] top-[100px] duration-300"
+    >
+      <li class="p-4">
+        <a href="/modelo-terapeutico" class="nav-link">Modelo terapéutico</a>
+      </li>
+      <li class="p-4">
+        <a href="/contact" class="nav-link">Contacto</a>
+      </li>
+    </ul>
+    <div class="block cursor-pointer hamburger md:hidden">
+      <HamburgerIcon id="menuButton" class="lg:hidden" />
+    </div>
+  </nav>
 </header>
 
 <script>
-  function setupMenu() {
-    const menuButton = document.getElementById("menuButton");
-    const menuLinks = document.getElementById("menuLinks");
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".nav-menu");
 
-    menuButton?.addEventListener("click", () => {
-      menuLinks?.classList.toggle("hidden");
+  if (hamburger && navMenu) {
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
     });
   }
-
-  window.addEventListener("DOMContentLoaded", setupMenu);
 </script>
 
 <style define:vars={{ primary, secondary }}>
@@ -44,21 +47,22 @@ const { primary, secondary } = colors;
       max-width: 200px;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 768px) {
       img {
         max-width: 350px;
       }
     }
   }
 
-  @media (max-width: 1024px) {
-    .menuLinks {
-      top: 101px;
+  @media (max-width: 768px) {
+    .nav-menu {
       background-color: var(--secondary);
+    }
+  }
 
-      a {
-        display: block;
-      }
+  @media only screen and (max-width: 768px) {
+    .nav-menu.active {
+      left: 0;
     }
   }
 </style>
