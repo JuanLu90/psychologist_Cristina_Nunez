@@ -13,7 +13,7 @@ const { greenLight, greenMedium, brownDark } = colors;
     >
 
     <ul
-      class="nav-menu absolute p-8 md:p-0 md:gap-12 md:static flex flex-col md:flex-row w-full md:w-auto text-center left-[-100%] top-[97px] duration-300"
+      class="nav-menu absolute p-8 md:p-0 md:gap-12 md:static flex flex-col md:flex-row w-full md:w-auto text-center left-[-100%] top-[89px] duration-300"
     >
       {
         headerCategories.map(({ redirectTo, name, subCategories }) => (
@@ -26,7 +26,7 @@ const { greenLight, greenMedium, brownDark } = colors;
               {subCategories && <ArrowDown />}
             </a>
             {subCategories && (
-              <ul class="dropdown-menu absolute left-0 top-full hidden group-hover:block bg-white shadow-lg w-max-content">
+              <ul class="dropdown-menu absolute left-0 top-full hidden group-hover:block bg-white shadow-lg w-full md:w-max-content z-10">
                 {subCategories.map((sub) => (
                   <li class="px-4 py-3 hover:bg-rose-50 transition duration-300">
                     <a

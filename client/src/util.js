@@ -12,7 +12,7 @@ export const headerCategories = [
   },
   { redirectTo: "/quien-soy", name: "¿Quién soy?" },
   {
-    redirectTo: "/#",
+    redirectTo: "#",
     name: "Método de trabajo",
     subCategories: [
       { redirectTo: "/modelo-terapeutico", name: "Modelo terapéutico" },
