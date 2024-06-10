@@ -12,6 +12,20 @@ export default {
         DEFAULT: "0 2px 4px rgba(0,0,0,0.3)",
         lg: "0 8px 16px rgba(0,0,0,0.3)",
       },
+      width: {
+        "max-content": "max-content",
+      },
+      colors: {
+        brownDark: {
+          DEFAULT: "#4C1D1E",
+        },
+        brownMedium: {
+          DEFAULT: "#B35512",
+        },
+        brownLight: {
+          DEFAULT: "#f5ece7",
+        },
+      },
     },
   },
   plugins: [

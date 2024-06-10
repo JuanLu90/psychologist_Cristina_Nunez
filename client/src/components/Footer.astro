@@ -1,12 +1,9 @@
 ---
 import LinkedinIcon from "../icons/linkedin.astro";
 import WhatsappIcon from "../icons/whatsapp.astro";
-
-import { colors } from "../util";
-const { greenLight, brownDark } = colors;
 ---
 
-<footer class="p-6">
+<footer class="p-6 text-brownDark bg-gray-50">
   <div class="mb-6">
     <a href="/">
       <img src="/img/logo2.png" alt="" class="w-full h-auto m-auto" />
@@ -46,10 +43,8 @@ const { greenLight, brownDark } = colors;
   </div>
 </footer>
 
-<style define:vars={{ greenLight, brownDark }}>
+<style>
   footer {
-    background-color: var(--greenLight);
-
     img {
       max-width: 250px;
     }
@@ -67,10 +62,5 @@ const { greenLight, brownDark } = colors;
     svg {
       margin: 7px;
     }
-  }
-
-  .wrapper-contact,
-  .wrapper-links {
-    color: var(--brownDark);
   }
 </style>

@@ -5,6 +5,25 @@ export const colors = {
   brownDark: "#4C1D1E",
 };
 
+export const headerCategories = [
+  {
+    redirectTo: "/",
+    name: "Inicio",
+  },
+  { redirectTo: "/quien-soy", name: "¿Quién soy?" },
+  {
+    redirectTo: "/#",
+    name: "Método de trabajo",
+    subCategories: [
+      { redirectTo: "/modelo-terapeutico", name: "Modelo terapéutico" },
+      { redirectTo: "/terapia-online", name: "Terapia online" },
+      { redirectTo: "/como-empezar", name: "¿Como puedo empezar?" },
+    ],
+  },
+  { redirectTo: "/supervisiones", name: "Supervisiones" },
+  { redirectTo: "/contacto", name: "Contacto" },
+];
+
 // "#d2a363"
 
 // Color Principal: #d8e3cd (un tono suave de verde)
