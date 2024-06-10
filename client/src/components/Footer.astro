@@ -3,13 +3,13 @@ import LinkedinIcon from "../icons/linkedin.astro";
 import WhatsappIcon from "../icons/whatsapp.astro";
 
 import { colors } from "../util";
-const { primary, secondary } = colors;
+const { greenLight, brownDark } = colors;
 ---
 
 <footer class="p-6">
   <div class="mb-6">
     <a href="/">
-      <img src="/img/logo.png" alt="" class="w-full h-auto m-auto" />
+      <img src="/img/logo2.png" alt="" class="w-full h-auto m-auto" />
     </a>
   </div>
   <div class="wrapper-socialmedia gap-2">
@@ -46,9 +46,9 @@ const { primary, secondary } = colors;
   </div>
 </footer>
 
-<style define:vars={{ primary, secondary }}>
+<style define:vars={{ greenLight, brownDark }}>
   footer {
-    background-color: var(--primary);
+    background-color: var(--greenLight);
 
     img {
       max-width: 250px;
@@ -71,6 +71,6 @@ const { primary, secondary } = colors;
 
   .wrapper-contact,
   .wrapper-links {
-    color: var(--secondary);
+    color: var(--brownDark);
   }
 </style>

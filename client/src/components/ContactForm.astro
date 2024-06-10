@@ -1,6 +1,6 @@
 ---
 import { colors } from "../util";
-const { primary } = colors;
+const { greenLight } = colors;
 
 const FORMSPREE_URL = import.meta.env.FORMSPREE_URL;
 ---
@@ -73,7 +73,7 @@ const FORMSPREE_URL = import.meta.env.FORMSPREE_URL;
   </form>
 </div>
 
-<style define:vars={{ primary }}>
+<style define:vars={{ greenLight }}>
   form input[type="text"],
   textarea {
     @apply mb-4 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight;
@@ -85,7 +85,7 @@ const FORMSPREE_URL = import.meta.env.FORMSPREE_URL;
   }
 
   button {
-    background-color: var(--primary);
+    background-color: var(--greenLight);
   }
 </style>
 
