@@ -1,62 +1,43 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import PhoneIcon from "../icons/phone.astro";
-import Mail from "../icons/mail.astro";
 import ContactForm from "../components/ContactForm.astro";
 
-import { colors } from "../util";
-const { greenMedium } = colors;
+import Phone from "../icons/phone.astro";
+import Mail from "../icons/mail.astro";
+import Whatsapp from "../icons/whatsapp.astro";
 ---
 
 <Layout title="Contacto">
   <div>
-    <div class="flex flex-col items-center md:flex-row p-5 md:w-3/4 m-auto">
-      <div class="h-full md:w-1/2">
-        <img src="/img/portada2.png" alt="" class="w-full h-auto" />
+    <div
+      class="flex justify-center flex-col md:flex-row md:justify-around text-center [&>div]:flex [&>div]:flex-col [&>div>a]:mx-auto [&>div>a]:mb-4 gap-12 m-6"
+    >
+      <div>
+        <a
+          href="https://wa.me/680260412"
+          class="font-bold flex"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Whatsapp width="70" />
+        </a>
+        <span>Envíame un mensaje</span>
       </div>
-      <div class="w-full md:w-1/2 md:mx-12 flex flex-col justify-center">
-        <h3 class="font-bold mt-5">
-          Soy Cristina Nuñez, Psicóloga General Sanitaria y Terapeuta Familiar y
-          de pareja y quiero darte la bienvenida a este refugio que he creado
-          con todo mi cariño.
-        </h3>
-        <p class="my-4">
-          Estás a solo un paso de comenzar un viaje transformador hacia el
-          bienestar emocional, tanto para ti como para tus seres queridos, o
-          incluso para tu desarrollo profesional como psicólogo. Aquí
-          encontrarás todas las formas en las que puedes comunicarte conmigo
-          para iniciar este importante camino. Estamos deseando escucharte y ser
-          parte de tu camino hacia un bienestar emocional y psicológico más
-          completo. No lo pospongas más, tu salud emocional es lo más valioso
-          que tienes.
-        </p>
-        <div class="mb-5 w-full">
-          <ul class="mt-6 [&>*]:my-3">
-            <li>
-              <a href="mailto:nparracristina@gmail.com" class="font-bold flex">
-                <span class="mr-2"> <Mail /> </span>
-                <span> nparracristina@gmail.com</span>
-              </a>
-            </li>
-            <li>
-              <a href="tel:+34680260412" class="font-bold flex">
-                <span class="mr-2"> <PhoneIcon /> </span>
-                <span> +34 680 26 04 12 </span>
-              </a>
-            </li>
-          </ul>
-        </div>
+      <div>
+        <a href="tel:+34680260412" class="font-bold flex">
+          <Phone width="70" />
+        </a>
+        <span>Llámame</span>
+      </div>
+      <div>
+        <a href="mailto:nparracristina@gmail.com" class="font-bold flex">
+          <Mail width="70" />
+        </a>
+        <span>Envíame un correo</span>
       </div>
     </div>
-
-    <div class="wrapperContactForm px-6">
+    <div class="px-6 bg-brownLight">
       <ContactForm />
     </div>
   </div>
 </Layout>
-
-<style define:vars={{ greenMedium }}>
-  .wrapperContactForm {
-    background-color: var(--greenMedium);
-  }
-</style>

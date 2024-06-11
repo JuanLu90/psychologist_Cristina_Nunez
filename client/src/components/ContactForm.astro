@@ -1,7 +1,4 @@
 ---
-import { colors } from "../util";
-const { greenDark } = colors;
-
 const FORMSPREE_URL = import.meta.env.FORMSPREE_URL;
 ---
 
@@ -61,7 +58,7 @@ const FORMSPREE_URL = import.meta.env.FORMSPREE_URL;
 
     <div class="flex items-center justify-between">
       <button
-        class="text-gray-50 hover:bg-emerald-500 font-bold py-3 px-5 focus:outline-none focus:shadow-outline border-b-4 border-emerald-600 w-full lg:w-auto"
+        class="text-gray-50 bg-brownDark hover:bg-emerald-500 border-brownMedium font-bold py-3 px-5 focus:outline-none focus:shadow-outline border-b-4 w-full lg:w-auto"
         type="submit"
       >
         Enviar
@@ -73,7 +70,7 @@ const FORMSPREE_URL = import.meta.env.FORMSPREE_URL;
   </form>
 </div>
 
-<style define:vars={{ greenDark }}>
+<style>
   form input[type="text"],
   textarea {
     @apply mb-4 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight;
@@ -82,10 +79,6 @@ const FORMSPREE_URL = import.meta.env.FORMSPREE_URL;
   form input[type="text"]:focus {
     outline: none;
     box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5); /* Replace with your desired shadow */
-  }
-
-  button {
-    background-color: var(--greenDark);
   }
 </style>
 

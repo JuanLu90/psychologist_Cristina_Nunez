@@ -1,5 +1,48 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+import Phone from "../icons/phone.astro";
+import Mail from "../icons/mail.astro";
 ---
 
-<Layout title="Quien soy">quien soy</Layout>
+<Layout title="Quien soy">
+  <div class="flex flex-col items-center md:flex-row p-5 md:w-3/4 m-auto">
+    <div class="h-full md:w-1/2">
+      <img src="/img/portada2.png" alt="" class="w-full h-auto" />
+    </div>
+    <div class="w-full md:w-1/2 md:mx-12 flex flex-col justify-center">
+      <h3 class="font-bold mt-5">
+        Soy Cristina Nuñez, Psicóloga General Sanitaria y Terapeuta Familiar y
+        de pareja y quiero darte la bienvenida a este refugio que he creado con
+        todo mi cariño.
+      </h3>
+      <p class="my-4">
+        Estás a solo un paso de comenzar un viaje transformador hacia el
+        bienestar emocional, tanto para ti como para tus seres queridos, o
+        incluso para tu desarrollo profesional como psicólogo. Aquí encontrarás
+        todas las formas en las que puedes comunicarte conmigo para iniciar este
+        importante camino. Estamos deseando escucharte y ser parte de tu camino
+        hacia un bienestar emocional y psicológico más completo. No lo pospongas
+        más, tu salud emocional es lo más valioso que tienes.
+      </p>
+      <div class="mb-5 w-full">
+        <ul
+          class="mt-6 [&>*]:my-3 [&>li>a]:font-bold [&>li>a]:flex [&>li>a]:items-center"
+        >
+          <li>
+            <a href="mailto:nparracristina@gmail.com">
+              <span class="mr-2"> <Mail width="20" /> </span>
+              <span> nparracristina@gmail.com</span>
+            </a>
+          </li>
+          <li>
+            <a href="tel:+34680260412">
+              <span class="mr-2"> <Phone width="20" /> </span>
+              <span> +34 680 26 04 12 </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div></Layout
+>
