@@ -25,6 +25,9 @@ export default {
         brownLight: {
           DEFAULT: "#f5ece7",
         },
+        blueMedium: {
+          DEFAULT: "#A9D3D5",
+        },
       },
     },
   },
