@@ -6,6 +6,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Roboto", "sans-serif"],
+        dancing: ["Dancing Script", "cursive"],
       },
       textShadow: {
         sm: "0 1px 2px rgba(0,0,0,0.3)",

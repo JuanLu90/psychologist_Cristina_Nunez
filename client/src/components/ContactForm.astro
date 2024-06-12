@@ -1,4 +1,5 @@
 ---
+import ArrowDown from "../icons/arrow-down.astro";
 const FORMSPREE_URL = import.meta.env.FORMSPREE_URL;
 ---
 
@@ -39,24 +40,32 @@ const FORMSPREE_URL = import.meta.env.FORMSPREE_URL;
       rows="2"
       placeholder="Disponibilidad horaria"></textarea>
 
-    <div class="flex items-center mb-5">
-      <input
-        id="link-checkbox"
-        type="checkbox"
-        value=""
-        class="w-4 h-4 border-gray-300 rounded"
-        required
-      />
-      <label for="link-checkbox" class="ms-2 text-sm font-medium"
-        >He leído y acepto los <a
-          href="#"
-          class="text-blue-600 dark:text-blue-500 hover:underline"
-          >términos y condiciones</a
-        >.</label
-      >
+    <h2
+      id="toggle-title"
+      class="text-xl font-bold text-blueMedium cursor-pointer flex"
+    >
+      INFORMACIÓN LEGAL {(<ArrowDown color="text-blueMedium" />)}
+    </h2>
+    <div class="mt-4 hidden overflow-hidden transition-height" id="contenido">
+      <p>
+        Se le informa que los datos personales de contacto facilitados por usted
+        en el presente formulario serán objeto de tratamiento por CRISTINA NÚÑEZ
+        PARRA como responsable del tratamiento, para la finalidad de atender su
+        solicitud manifestada en el mismo y cuya legitimación proviene del
+        interés legítimo que poseemos para responder a las consultas, peticiones
+        o solicitudes de los usuarios de la web.
+      </p>
+      <br />
+      <p>
+        Estos datos de contacto sólo serán utilizados para responderle a su
+        solicitud y serán eliminados a la conclusión de la petición realizada
+        por usted. No se cederán ni comunicarán a terceros salvo exigencia
+        legal. Al pulsar el botón ENVIAR, está reconociendo que ha sido
+        informado sobre el uso que daremos a estos datos personales.
+      </p>
     </div>
 
-    <div class="flex items-center justify-between">
+    <div class="flex items-center justify-between mt-3">
       <button
         class="text-gray-50 bg-brownDark hover:bg-brownMedium border-b-4 border-brownMedium font-bold py-3 px-5 focus:outline-none focus:shadow-outline w-full lg:w-auto"
         type="submit"
@@ -80,12 +89,37 @@ const FORMSPREE_URL = import.meta.env.FORMSPREE_URL;
     outline: none;
     box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5); /* Replace with your desired shadow */
   }
+
+  .transition-height {
+    max-height: 0;
+    overflow: hidden;
+    transition-property: max-height;
+    transition-duration: 0.5s; /* Adjust the duration as needed */
+  }
 </style>
 
 <script>
   const myForm = document.getElementById("myForm");
   const statusElement = document.getElementById("statusForm");
   const wrapperStatusElement = document.getElementById("wrapperStatusForm");
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const titleElement = document.getElementById("toggle-title");
+
+    if (titleElement) {
+      titleElement.addEventListener("click", function () {
+        const content = document.getElementById("contenido");
+        if (content) {
+          content.classList.toggle("hidden");
+          if (content.classList.contains("hidden")) {
+            content.style.maxHeight = "0";
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+          }
+        }
+      });
+    }
+  });
 
   function handleResponse(
     xhr: XMLHttpRequest,
