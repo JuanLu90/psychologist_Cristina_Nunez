@@ -1,5 +1,117 @@
 ---
+import Mail2 from "../icons/mail2.astro";
+import Form from "../icons/form.astro";
+import Whatsapp2 from "../icons/whatsapp2.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="¿Como puedo empezar?">como puedo empezar</Layout>
+<Layout title="¿Como puedo empezar?">
+  <h2 class="text-6xl text-center p-12 font-dancing text-blueMedium">
+    ¿Cómo puedo empezar?
+  </h2>
+
+  <div class="md:w-3/4 w-full m-auto">
+    <span class="text-blueMedium text-xl">Ponte en contacto conmigo vía: </span>
+  </div>
+  <div
+    class="flex justify-center flex-col md:flex-row md:justify-around md:w-3/4 w-full my-12 mx-auto md:p-0 text-center [&>div]:flex [&>div]:flex-col [&>div>a]:mx-auto [&>div>a]:mb-4 gap-12 p-6"
+  >
+    <div>
+      <a
+        href="https://wa.me/680260412"
+        class="font-bold flex"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Whatsapp2 width="70" />
+      </a>
+      <span>Envíame un mensaje</span>
+    </div>
+    <div>
+      <a href="/contacto" class="font-bold flex">
+        <Form />
+      </a>
+      <span>Formulario</span>
+    </div>
+    <div>
+      <a href="mailto:nparracristina@gmail.com" class="font-bold flex">
+        <Mail2 width="70" />
+      </a>
+      <span>Envíame un correo</span>
+    </div>
+  </div>
+  <div class="md:w-4/5 w-full m-auto p-6">
+    <div class="flex mb-6 flex-col md:flex-row md:mr-80 ml-0">
+      <div class="flex justify-center p-12 flex-shrink-0 text-center">
+        <img src="/img/como-empezar-1.png" alt="" width="222" height="170" />
+      </div>
+      <div
+        class="flex flex-col items-center text-center md:items-start md:text-left"
+      >
+        <span
+          class="w-14 h-14 bg-brownLight text-brownMedium rounded-full flex justify-center text-5xl"
+        >
+          1
+        </span>
+        <h2 class="text-blueMedium text-2xl my-2">Llamada telefónica</h2>
+        <p>
+          Antes de agendar una cita, me pondré en contacto contigo mediante una
+          llamada. En esta llamada podré explicarte como el proceso a seguir
+          para iniciar terapia, cómo trabajo y te preguntaré brevemente que
+          esperas de iniciar la terpaia. En esta primera llamada, valoraré
+          también que tu caso puede abordarse de manera online y no hay ninguna
+          contraindicación.
+        </p>
+      </div>
+    </div>
+    <div class="flex mb-6 flex-col md:flex-row md:ml-48 md:mr-44 ml-0">
+      <div class="flex justify-center p-12 flex-shrink-0">
+        <img src="/img/como-empezar-1.png" alt="" width="222" height="170" />
+      </div>
+      <div
+        class="flex flex-col items-center text-center md:items-start md:text-left"
+      >
+        <span
+          class="w-14 h-14 bg-brownLight text-brownMedium rounded-full flex justify-center text-5xl"
+        >
+          2
+        </span>
+        <h2 class="text-blueMedium text-2xl my-2">
+          Envío de documentos e información pre-consulta.
+        </h2>
+        <p>
+          Una vez agendada la cita, te enviaré un correo con varios documentos a
+          rellenar relativos a la protección de datos así como una beve encuesta
+          inicial. Asimismo, os daré por escrito información relativa a la forma
+          de pago y la plataforma que utilizaremos para hacer la videollamada.
+        </p>
+      </div>
+    </div>
+    <div class="flex mb-6 flex-col md:flex-row md:ml-96 ml-0">
+      <div class="flex justify-center p-12 flex-shrink-0">
+        <img src="/img/como-empezar-1.png" alt="" width="222" height="170" />
+      </div>
+      <div
+        class="flex flex-col items-center text-center md:items-start md:text-left"
+      >
+        <span
+          class="w-14 h-14 bg-brownLight text-brownMedium rounded-full flex justify-center text-5xl"
+        >
+          3
+        </span>
+        <h2 class="text-blueMedium text-2xl my-2">
+          Recepción de los documentos.
+        </h2>
+        <p>
+          Una vez que he recibido los documentos debiadamente cumplimnetados, te
+          daré de alta en la plataforma Psypocket para que podamos tener la
+          sesión el día y la hora programadas.
+        </p>
+      </div>
+    </div>
+    <div>
+      Es normal que en la primera sesión aparezcan muchas dudas e inquietud,
+      ponerle palabras a lo que nos pasa a veces es muy difícil.
+    </div>
+  </div>
+</Layout>
