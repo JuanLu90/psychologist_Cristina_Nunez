@@ -1,71 +1,54 @@
 ---
 import Square from "../icons/square.astro";
 import Layout from "../layouts/Layout.astro";
+
+import { modeloTerapeutico } from "../data.json";
+const { text1, text2, text3, text4, text5, text6, text7, enfoqueTerapeutico } =
+  modeloTerapeutico;
 ---
 
 <Layout title="Modelo terapéutico">
   <div class="text-center m-6 md:my-12">
     <span class="italic text-blueMedium text-3xl">
-      Abordaje de los problemas emocionales y psicológicos desde una perspectiva
-      integral.
+      {text1}
     </span>
   </div>
   <div class="md:w-3/4 m-auto p-6 md:p-0">
     <span>
-      Mi enfoque terapéutico tiene como diana el trabajo con tres patrones
-      básicos de funcionamiento:
+      {enfoqueTerapeutico.title}
     </span>
 
     <ul class="max-w-md space-y-1 list-disc list-inside mt-6">
-      <li class="flex">
-        <Square width="15" />
-        Patrón de autocuidado
-      </li>
-      <li class="flex">
-        <Square width="15" />
-        Patrón de regulación emocional
-      </li>
-      <li class="flex">
-        <Square width="15" />
-        Patrón relaiconal
-      </li>
+      {
+        enfoqueTerapeutico.patrones.map((pattern) => (
+          <li class="flex">
+            <Square width="15" />
+            {pattern}
+          </li>
+        ))
+      }
     </ul>
   </div>
   <div
     class="my-24 px-6 py-20 md:p-24 text-center bg-blueMedium text-3xl leading-normal"
   >
-    El objetivo final es restablecer la estabilidad, calma y seguridad de la
-    persona, en un contexto cálido, amable y honesto a la par que profesional y
-    basado en evidencia.
+    {text2}
   </div>
   <div class="md:w-3/4 my-12 mx-auto p-6 md:p-0 text-lg">
-    Mi modelo terapéutico se nutre principalmente de la terapia EMDR (siglas de
-    (Eyes Movement Desensitization and Reprocessing) y las terapias de tercera
-    generación.
+    {text3}
   </div>
   <div class="md:w-3/4 my-12 mx-auto p-6 md:p-0 text-lg">
-    La terapia EMDR es un método de psicoterapia desde el cual podemos integrar
-    nuestra historia de vida sin que se activen respuestas de protección que ya
-    no son funcionales en el presente aunque en el pasado pudieron ser útiles.
+    {text4}
   </div>
   <div
     class="my-24 px-6 py-20 md:p-24 text-center bg-blueMedium text-3xl leading-normal"
   >
-    En cada proceso, trato de favorecer la capacidade de reflexión de la persona
-    que acude a terapia para que pueda entenderse mejor a sí misma. La
-    capacidade reflexiva supone hacernos más preguntas que buscar respuestas.
+    {text5}
   </div>
   <div class="md:w-3/4 my-12 mx-auto p-6 md:p-0 text-lg">
-    Las terapias de tercera generación están presentes en mi trabajo cuando
-    acompaño a la persona a relacionarse con el malestar psicológico desde otra
-    posición, que no es de lucha sino de aceptación. Casi de forma transversal a
-    toda la terapia, tratamos de foemntar una actitud amable que va a ser clave
-    para poder entender nuestra historia y verla desde la curiosidad si que
-    emociones como la culpa nos bloqueen.
+    {text6}
   </div>
   <div class="md:w-3/4 my-12 mx-auto p-6 md:p-0 text-lg">
-    Como podrás imaginar nada de esto es fácil y requiere ir aprendiendo a
-    transitar por estos estados con calma, de manera progresiva y de una forma
-    que sea tolerable para la persona.
+    {text7}
   </div>
 </Layout>

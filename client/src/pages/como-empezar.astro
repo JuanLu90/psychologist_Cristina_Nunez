@@ -3,126 +3,69 @@ import Mail2 from "../icons/mail2.astro";
 import Form from "../icons/form.astro";
 import Whatsapp2 from "../icons/whatsapp2.astro";
 import Layout from "../layouts/Layout.astro";
+
+import { comoEmpezar } from "../data.json";
+const { title, steps } = comoEmpezar;
 ---
 
 <Layout title="¿Como puedo empezar?">
   <h2 class="text-6xl text-center md:p-12 pt-12 font-dancing text-blueMedium">
-    ¿Cómo puedo empezar?
+    {title}
   </h2>
   <div class="md:w-4/5 w-full m-auto p-6">
-    <div class="flex mb-6 flex-col md:flex-row">
-      <div class="flex justify-center p-12 flex-shrink-0 text-center">
-        <img src="/img/como-empezar-1.png" alt="" width="222" height="170" />
-      </div>
-      <div
-        class="flex flex-col items-center text-center md:items-start md:text-left"
-      >
-        <span
-          class="w-14 h-14 bg-brownLight text-brownMedium rounded-full flex justify-center text-5xl"
-        >
-          1
-        </span>
-        <h2 class="text-blueMedium text-2xl my-2">
-          Ponte en contacto conmigo vía:
-        </h2>
-        <ul class="max-w-md space-y-1 list-disc list-inside">
-          <li class="flex">
-            <Whatsapp2 width="20" />
-            <a
-              href="https://wa.me/680260412"
-              class="ml-2 font-bold hover:text-blueMedium"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Whatsapp
-            </a>
-          </li>
-          <li class="flex">
-            <Mail2 width="20" />
-            <a
-              href="mailto:nparracristina@gmail.com"
-              class="ml-2 font-bold hover:text-blueMedium"
-            >
-              Email
-            </a>
-          </li>
-          <li class="flex">
-            <Form width="20" />
-            <a href="/contacto" class="ml-2 font-bold hover:text-blueMedium">
-              Formulario
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="flex mb-6 flex-col md:flex-row">
-      <div class="flex justify-center p-12 flex-shrink-0 text-center">
-        <img src="/img/como-empezar-1.png" alt="" width="222" height="170" />
-      </div>
-      <div
-        class="flex flex-col items-center text-center md:items-start md:text-left"
-      >
-        <span
-          class="w-14 h-14 bg-brownLight text-brownMedium rounded-full flex justify-center text-5xl"
-        >
-          2
-        </span>
-        <h2 class="text-blueMedium text-2xl my-2">Llamada telefónica</h2>
-        <p>
-          Antes de agendar una cita, me pondré en contacto contigo mediante una
-          llamada. En esta llamada podré explicarte como el proceso a seguir
-          para iniciar terapia, cómo trabajo y te preguntaré brevemente que
-          esperas de iniciar la terpaia. En esta primera llamada, valoraré
-          también que tu caso puede abordarse de manera online y no hay ninguna
-          contraindicación.
-        </p>
-      </div>
-    </div>
-    <div class="flex mb-6 flex-col md:flex-row">
-      <div class="flex justify-center p-12 flex-shrink-0">
-        <img src="/img/como-empezar-1.png" alt="" width="222" height="170" />
-      </div>
-      <div
-        class="flex flex-col items-center text-center md:items-start md:text-left"
-      >
-        <span
-          class="w-14 h-14 bg-brownLight text-brownMedium rounded-full flex justify-center text-5xl"
-        >
-          3
-        </span>
-        <h2 class="text-blueMedium text-2xl my-2">
-          Envío de documentos e información pre-consulta.
-        </h2>
-        <p>
-          Una vez agendada la cita, te enviaré un correo con varios documentos a
-          rellenar relativos a la protección de datos así como una beve encuesta
-          inicial. Asimismo, os daré por escrito información relativa a la forma
-          de pago y la plataforma que utilizaremos para hacer la videollamada.
-        </p>
-      </div>
-    </div>
-    <div class="flex mb-6 flex-col md:flex-row">
-      <div class="flex justify-center p-12 flex-shrink-0">
-        <img src="/img/como-empezar-1.png" alt="" width="222" height="170" />
-      </div>
-      <div
-        class="flex flex-col items-center text-center md:items-start md:text-left"
-      >
-        <span
-          class="w-14 h-14 bg-brownLight text-brownMedium rounded-full flex justify-center text-5xl"
-        >
-          4
-        </span>
-        <h2 class="text-blueMedium text-2xl my-2">
-          Recepción de los documentos.
-        </h2>
-        <p>
-          Una vez que he recibido los documentos debiadamente cumplimnetados, te
-          daré de alta en la plataforma Psypocket para que podamos tener la
-          sesión el día y la hora programadas.
-        </p>
-      </div>
-    </div>
+    {
+      steps.map((step, index) => {
+        return (
+          <div class="flex mb-6 flex-col md:flex-row items-center">
+            <div class="flex justify-center p-12 flex-shrink-0 text-center">
+              <img src={step.image} alt="" width="222" height="170" />
+            </div>
+            <div class="flex flex-col items-center text-center md:items-start md:text-left">
+              <span class="w-14 h-14 bg-brownLight text-brownMedium rounded-full flex justify-center text-5xl">
+                {index + 1}
+              </span>
+              <h2 class="text-blueMedium text-2xl my-2">{step.title}</h2>
+
+              {step.text ? (
+                <p>{step.text}</p>
+              ) : (
+                <ul class="max-w-md space-y-1 list-disc list-inside">
+                  <li class="flex">
+                    <Whatsapp2 width="20" />
+                    <a
+                      href="https://wa.me/680260412"
+                      class="ml-2 font-bold hover:text-blueMedium"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Whatsapp
+                    </a>
+                  </li>
+                  <li class="flex">
+                    <Mail2 width="20" />
+                    <a
+                      href="mailto:nparracristina@gmail.com"
+                      class="ml-2 font-bold hover:text-blueMedium"
+                    >
+                      Email
+                    </a>
+                  </li>
+                  <li class="flex">
+                    <Form width="20" />
+                    <a
+                      href="/contacto"
+                      class="ml-2 font-bold hover:text-blueMedium"
+                    >
+                      Formulario
+                    </a>
+                  </li>
+                </ul>
+              )}
+            </div>
+          </div>
+        );
+      })
+    }
     <div class="mt-28">
       Es normal que en la primera sesión aparezcan muchas dudas e inquietud,
       ponerle palabras a lo que nos pasa a veces es muy difícil.

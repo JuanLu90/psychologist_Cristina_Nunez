@@ -1,0 +1,48 @@
+{
+  "index": {
+    "text1": "Un espacio seguro donde acompañarte desde la honestidad, sentido de la responsabilidad y profesionalidad.",
+    "text2": "Nuestra historia de vida es lo mas valioso que tenemos, por ello intento tratarla desde el máximo respeto y confidencialidad.",
+    "text3": "Cómo trabajo"
+  },
+  "comoEmpezar": {
+    "title": "¿Cómo puedo empezar?",
+    "steps": [
+      {
+        "image": "/img/como-empezar-3.png",
+        "title": "Ponte en contacto conmigo vía:"
+      },
+      {
+        "image": "/img/como-empezar-2.svg",
+        "title": "Llamada telefónica",
+        "text": "Antes de agendar una cita, me pondré en contacto contigo mediante unavllamada. En esta llamada podré explicarte como el proceso a seguir para iniciar terapia, cómo trabajo y te preguntaré brevemente que esperas de iniciar la terpaia. En esta primera llamada, valoraré también que tu caso puede abordarse de manera online y no hay ninguna contraindicación."
+      },
+      {
+        "image": "/img/como-empezar-4.svg",
+        "title": "Envío de documentos e información pre-consulta.",
+        "text": "Una vez agendada la cita, te enviaré un correo con varios documentos a rellenar relativos a la protección de datos así como una beve encuesta inicial. Asimismo, os daré por escrito información relativa a la forma de pago y la plataforma que utilizaremos para hacer la videollamada."
+      },
+      {
+        "image": "/img/como-empezar-5.svg",
+        "title": "Recepción de los documentos.",
+        "text": "Una vez que he recibido los documentos debiadamente cumplimentados, te daré de alta en la plataforma Psypocket para que podamos tener la sesión el día y la hora programadas."
+      }
+    ]
+  },
+  "modeloTerapeutico": {
+    "text1": "Abordaje de los problemas emocionales y psicológicos desde una perspectiva integral.",
+    "enfoqueTerapeutico": {
+        "title": "Mi enfoque terapéutico tiene como diana el trabajo con tres patrones básicos de funcionamiento:",
+        "patrones": [
+           "Patrón de autocuidado",  
+           "Patrón de regulación emocional",
+           "Patrón relacional"
+        ]
+    },
+    "text2": "El objetivo final es restablecer la estabilidad, calma y seguridad de la persona, en un contexto cálido, amable y honesto a la par que profesional y basado en evidencia.",
+    "text3": "Mi modelo terapéutico se nutre principalmente de la terapia EMDR (siglas de (Eyes Movement Desensitization and Reprocessing) y las terapias de tercera generación.",
+    "text4": "La terapia EMDR es un método de psicoterapia desde el cual podemos integrar nuestra historia de vida sin que se activen respuestas de protección que ya no son funcionales en el presente aunque en el pasado pudieron ser útiles.",
+    "text5": "En cada proceso, trato de favorecer la capacidade de reflexión de la persona que acude a terapia para que pueda entenderse mejor a sí misma. La capacidad reflexiva supone hacernos más preguntas que buscar respuestas.",
+    "text6": "Las terapias de tercera generación están presentes en mi trabajo cuando acompaño a la persona a relacionarse con el malestar psicológico desde otra posición, que no es de lucha sino de aceptación. Casi de forma transversal a toda la terapia, tratamos de foemntar una actitud amable que va a ser clave para poder entender nuestra historia y verla desde la curiosidad si que emociones como la culpa nos bloqueen.",
+    "text7": "Como podrás imaginar nada de esto es fácil y requiere ir aprendiendo a transitar por estos estados con calma, de manera progresiva y de una forma que sea tolerable para la persona."
+  }
+}

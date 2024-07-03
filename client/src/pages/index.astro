@@ -2,6 +2,9 @@
 import Principal from "../sections/Principal.astro";
 import Layout from "../layouts/Layout.astro";
 import WhoIAm from "../sections/WhoIAm.astro";
+
+import { index } from "../data.json";
+const { text1, text2, text3 } = index;
 ---
 
 <Layout title="Psicóloga - Cristina Nuñez Parra">
@@ -12,19 +15,13 @@ import WhoIAm from "../sections/WhoIAm.astro";
   <div
     class="px-6 py-20 md:p-24 text-center text-3xl bg-brownLight leading-normal"
   >
-    <p>
-      Un espacio seguro donde acompañarte desde la honestidad, sentido de la
-      responsabilidad y profesionalidad.
-    </p>
+    <p>{text1}</p>
     <br />
-    <p>
-      Nuestra historia de vida es lo mas valioso que tenemos, por ello intento
-      tratarla desde el máximo respeto y confidencialidad.
-    </p>
+    <p>{text2}</p>
     <a
       href="/modelo-terapeutico"
       class="bg-white hover:text-rose-300 text-xl py-2 px-4 mt-10 block text-center lg:inline-block border-b-4 border-brownDark"
-      >Cómo trabajo</a
+      >{text3}</a
     >
   </div>
 </Layout>
