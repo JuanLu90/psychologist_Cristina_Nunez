@@ -31,12 +31,12 @@
   "modeloTerapeutico": {
     "text1": "Abordaje de los problemas emocionales y psicológicos desde una perspectiva integral.",
     "enfoqueTerapeutico": {
-        "title": "Mi enfoque terapéutico tiene como diana el trabajo con tres patrones básicos de funcionamiento:",
-        "patrones": [
-           "Patrón de autocuidado",  
-           "Patrón de regulación emocional",
-           "Patrón relacional"
-        ]
+      "title": "Mi enfoque terapéutico tiene como diana el trabajo con tres patrones básicos de funcionamiento:",
+      "patrones": [
+        "Patrón de autocuidado",
+        "Patrón de regulación emocional",
+        "Patrón relacional"
+      ]
     },
     "text2": "El objetivo final es restablecer la estabilidad, calma y seguridad de la persona, en un contexto cálido, amable y honesto a la par que profesional y basado en evidencia.",
     "text3": "Mi modelo terapéutico se nutre principalmente de la terapia EMDR (siglas de (Eyes Movement Desensitization and Reprocessing) y las terapias de tercera generación.",
@@ -44,5 +44,63 @@
     "text5": "En cada proceso, trato de favorecer la capacidade de reflexión de la persona que acude a terapia para que pueda entenderse mejor a sí misma. La capacidad reflexiva supone hacernos más preguntas que buscar respuestas.",
     "text6": "Las terapias de tercera generación están presentes en mi trabajo cuando acompaño a la persona a relacionarse con el malestar psicológico desde otra posición, que no es de lucha sino de aceptación. Casi de forma transversal a toda la terapia, tratamos de foemntar una actitud amable que va a ser clave para poder entender nuestra historia y verla desde la curiosidad si que emociones como la culpa nos bloqueen.",
     "text7": "Como podrás imaginar nada de esto es fácil y requiere ir aprendiendo a transitar por estos estados con calma, de manera progresiva y de una forma que sea tolerable para la persona."
+  },
+  "quienSoy": {
+    "title": "Soy Cristina Núñez,",
+    "subtitle": "PSICÓLOGA, EMPRENDEDORA Y MAMÁ.",
+    "text1": "Soy psicóloga general sanitaria, colegiada en el Ilustre Colegio Oficial de Psicología de Andalucía Oriental No: AO-10191.",
+    "text2": "En mis inicios como profesional de la psicología, mi área de intervención estuvo centrada en la Atención Temprana, es decir, en el conjunto de intervenciones, dirigidas a niños y niñas de 0 a 6 años que presentan trastornos del desarrollo o riesgo de padecerlos , a sus familias y a su entorno.",
+    "text3": "Más tarde, decidí centrar mi actividad profesional en la promoción y prevención de salud mental tanto en adultos como en población infanto-juvenil. En las terapias de tercera generación encontré un enfoque tremendmente útil en el que ayudar a mis pacientes a relacionarse con el malestar psicológico de otra forma. Desde ese momento, el desarrollo de habilidades de autocompasión está muy presente en mi trabajo.",
+    "text4": "Más tarde, me formé en trauma y apego. La terapia EMDR ha supuesto un antes y un después en mi ejercicio profesional. Actualmente, trabajo desde un enfoque integrador que me permite tener una visión global de la persona, incluyendo pasado, presente y futuro.",
+    "formacion": {
+      "title": "FORMACIÓN ESPECÍFICA",
+      "lista": [
+        "Grado en Psicología con mención en psicología clínica (Universidad de Málaga)",
+        "Máster Propio Universitario en Atención Temprana “Dr. Miguel de Linares Pezzi\" (Universidad de Málaga)",
+        "Máster en Psicología General Sanitaria (Universidad de Málaga)",
+        "Especialista en Terapias Contextuales (Universidad de Almería)",
+        "Instituto Español de EMDR-Protocolo estándar Nivel II",
+        "Trauma complejo, apego y disociación: el trabajo con EMDR en la traumatización compleja (Asociación EMDR España)",
+        "Jornada clínica: TLP Y Trastornos de la personalidad (Asociación EMDR España)",
+        "Jornada clínica sobre Apego Seguro a través del juego (Asociación EMDR España)"
+      ]
+    },
+    "congresos": {
+      "title": "PARTICIPACIÓN EN CONGRESOS",
+      "lista": [
+        "XII Congreso Internacional y XVII Nacional de Psicología Clínica: Comunicación titulada \"Evaluación del progreso terapéutico en un caso de trastorno de pánico con agorafobia\" cuyos autores son María del Carmen Castilejos Anguiano, Paloma Huertas Maestre, Cristina Nuñez Parra, Rafael Matas Vázquez y Berta Moreno Kustner"
+      ]
+    },
+    "investigacion": {
+      "title": "INVESTIGACIÓN",
+      "lista": [
+        "Beneficiaria de la beca de Iniciación a la Investigación del I Plan Propio de Investigación y Transferencia de la Universidad de Málaga. Desempeñando diversas tareas dentro del grupo de investigación \"Vulnerabilidad al Dolor Crónico\", dentro de la línea de Investigación “Trastorno de estrés postraumático y dolor crónico como entidades comórbidas: análisis de factores transdiagnósticos (TEPDOCRO)”"
+      ]
+    },
+    "publicaciones": {
+      "title": "PUBLICACIONES",
+      "lista": [
+        "III Jornadas de Investigación de la Facultad de Psicología y Logopedia de la Universidad de Málaga: \"Validación española de la versión breve de la Escala de Intolerancia a la Incertidumbre (IUS-12-VE) en pacientes con dolor crónico musculoesquelético\""
+      ]
+    },
+    "reconocimiento": {
+      "title": "RECONOCIMIENTO",
+      "lista": [
+        "Matrícula de honor en el Trabajo Fin de Máster en Psicología General Sanitaria"
+      ]
+    },
+    "prensa": {
+      "title": "PRENSA",
+      "link": "https://www.diariosur.es/sociedad/salud/reto-desatender-salud-20200728102244-nt.html?ref=https%3A%2F%2Fwww.diariosur.es%2Fsociedad%2Fsalud%2Freto-desatender-salud-20200728102244-nt.html",
+      "text1": "Artículo en Diario Sur: Reto desatender salud",
+      "text2": "Enlace a la noticia"
+    },
+    "curiosidades": {
+      "title": "OTRAS CURIOSIDADES SOBRE MÍ...",
+      "text1": "Me encanta ser mamá, bendita revolución la maternidad",
+      "text2": "Mi estación favorita es el verano, me encanta la playa",
+      "text3": "Adoro la música, Queen y Héroes del silencio me acompañan siempre",
+      "text4": "No era muy deportista hasta que descubrí el entrenamiento de fuerza, ahora disfruto potenciando mi versión más sana y fuerte"
+    }
   }
 }

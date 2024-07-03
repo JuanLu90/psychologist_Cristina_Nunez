@@ -1,8 +1,24 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
 import Square from "../icons/square.astro";
 import Link from "../icons/link.astro";
+
+import { quienSoy } from "../data.json";
+const {
+  title,
+  subtitle,
+  text1,
+  text2,
+  text3,
+  text4,
+  formacion,
+  congresos,
+  investigacion,
+  publicaciones,
+  reconocimiento,
+  prensa,
+  curiosidades,
+} = quienSoy;
 ---
 
 <Layout title="Quien soy">
@@ -13,139 +29,93 @@ import Link from "../icons/link.astro";
     <div
       class="w-full md:w-1/2 md:mx-12 mt-6 md:mt-0 flex flex-col justify-center"
     >
-      <span class="font-bold text-brownMedium">Soy Cristina Núñez,</span>
-      <span class="font-bold">PSICÓLOGA, EMPRENDEDORA Y MAMÁ.</span>
+      <span class="font-bold text-brownMedium">{title}</span>
+      <span class="font-bold">{subtitle}</span>
 
       <br />
       <p class="text-justify text-gray-500">
-        Soy psicóloga general sanitaria, colegiada en el Ilustre Colegio Oficial
-        de Psicología de Andalucía Oriental No: AO-10191.
+        {text1}
         <br />
-        En mis inicios como profesional de la psicología, mi área de intervención
-        estuvo centrada en la Atención Temprana, es decir, en el conjunto de intervenciones,
-        dirigidas a niños y niñas de 0 a 6 años que presentan trastornos del desarrollo
-        o riesgo de padecerlos , a sus familias y a su entorno.
+        {text2}
         <br />
-        Más tarde, decidí centrar mi actividad profesional en la promoción y prevención
-        de salud mental tanto en adultos como en población infanto-juvenil. En las
-        terapias de tercera generación encontré un enfoque tremendmente útil en el
-        que ayudar a mis pacientes a relacionarse con el malestar psicológico de
-        otra forma. Desde ese momento, el desarrollo de habilidades de autocompasión
-        está muy presente en mi trabajo.
+        {text3}
         <br />
-        Más tarde, me formé en trauma y apego. La terapia EMDR ha supuesto un antes
-        y un después en mi ejercicio profesional. Actualmente, trabajo desde un enfoque
-        integrador que me permite tener una visión global de la persona, incluyendo
-        pasado, presente y futuro.
+        {text4}
       </p>
     </div>
   </div>
   <div class="md:grid md:grid-cols-2 p-6 md:w-3/4 m-auto">
     <div>
       <h2 class="mb-2 text-lg font-semibold text-blueMedium">
-        FORMACIÓN ESPECÍFICA
+        {formacion.title}
       </h2>
       <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside">
-        <li class="flex">
-          <Square width="15" />
-          Grado en Psicología con mención en psicología clínica (Universidad de Málaga)
-        </li>
-        <li class="flex">
-          <Square width="15" />
-          Máster Propio Universitario en Atención Temprana “Dr. Miguel de Linares
-          Pezzi" (Universidad de Málaga)
-        </li>
-        <li class="flex">
-          <Square width="15" />
-          Máster en Psicología General Sanitaria (Universidad de Málaga)
-        </li>
-        <li class="flex">
-          <Square width="15" />
-          Especialista en Terapias Contextuales (Universidad de Almería)
-        </li>
-        <li class="flex">
-          <Square width="15" />
-          Instituto Español de EMDR-Protocolo estándar Nivel II
-        </li>
-        <li class="flex">
-          <Square width="15" />
-          Trauma complejo, apego y disociación: el trabajo con EMDR en la traumatización
-          compleja (Asociación EMDR España)
-        </li>
-        <li class="flex">
-          <Square width="15" />
-          Jornada clínica: TLP Y Trastornos de la personalidad (Asociación EMDR España)
-        </li>
-        <li class="flex">
-          <Square width="15" />
-          Jornada clínica sobre Apego Seguro a través del juego (Asociación EMDR
-          España)
-        </li>
+        {
+          formacion.lista.map((formation) => (
+            <li class="flex">
+              <Square width="15" />
+              {formation}
+            </li>
+          ))
+        }
       </ul>
 
       <br /><br />
 
       <h2 class="mb-2 text-lg font-semibold text-blueMedium">
-        PARTICIPACIÓN EN CONGRESOS
+        {congresos.title}
       </h2>
       <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside">
-        <li class="flex">
-          XII Congreso Internacional y XVII Nacional de Psicología Clínica:
-          Comunicación titulada "Evaluación del progreso terapéutico en un caso
-          de trastorno de pánico con agorafobia" cuyos autores son María del
-          Carmen Castilejos Anguiano, Paloma Huertas Maestre, Cristina Nuñez
-          Parra, Rafael Matas Vázquez y Berta Moreno Kustner
-        </li>
+        {congresos.lista.map((congress) => <li class="flex">{congress}</li>)}
       </ul>
     </div>
     <div>
-      <h2 class="mb-2 text-lg font-semibold text-blueMedium">INVESTIGACIÓN</h2>
+      <h2 class="mb-2 text-lg font-semibold text-blueMedium">
+        {investigacion.title}
+      </h2>
       <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside">
-        <li class="flex">
-          Beneficiaria de la beca de Iniciación a la Investigación del I Plan
-          Propio de Investigación y Transferencia de la Universidad de Málaga.
-          Desempeñando diversas tareas dentro del grupo de investigación
-          "Vulnerabilidad al Dolor Crónico", dentro de la línea de Investigación
-          “Trastorno de estrés postraumático y dolor crónico como entidades
-          comórbidas: análisis de factores transdiagnósticos (TEPDOCRO)”
-        </li>
+        {
+          investigacion.lista.map((investigation) => (
+            <li class="flex">{investigation}</li>
+          ))
+        }
       </ul>
 
       <br /><br />
 
-      <h2 class="mb-2 text-lg font-semibold text-blueMedium">PUBLICACIONES</h2>
+      <h2 class="mb-2 text-lg font-semibold text-blueMedium">
+        {publicaciones.title}
+      </h2>
       <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside">
-        <li class="flex">
-          III Jornadas de Investigación de la Facultad de Psicología y Logopedia
-          de la Universidad de Málaga: "Validación española de la versión breve
-          de la Escala de Intolerancia a la Incertidumbre (IUS-12-VE) en
-          pacientes con dolor crónico musculoesquelético"
-        </li>
+        {
+          publicaciones.lista.map((publication) => (
+            <li class="flex">{publication}</li>
+          ))
+        }
       </ul>
 
       <br /><br />
 
-      <h2 class="mb-2 text-lg font-semibold text-blueMedium">RECONOCIMIENTO</h2>
+      <h2 class="mb-2 text-lg font-semibold text-blueMedium">
+        {reconocimiento.title}
+      </h2>
       <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside">
-        <li class="flex">
-          Matrícula de honor en el Trabajo Fin de Máster en Psicología General
-          Sanitaria
-        </li>
+        {
+          reconocimiento.lista.map((recognition) => (
+            <li class="flex">{recognition}</li>
+          ))
+        }
       </ul>
 
       <br /><br />
 
-      <h2 class="mb-2 text-lg font-semibold text-blueMedium">PRENSA</h2>
+      <h2 class="mb-2 text-lg font-semibold text-blueMedium">{prensa.title}</h2>
       <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside">
         <li class="flex flex-col">
-          Artículo en Diario Sur: Reto desatender salud
-          <a
-            href="https://www.diariosur.es/sociedad/salud/reto-desatender-salud-20200728102244-nt.html?ref=https%3A%2F%2Fwww.diariosur.es%2Fsociedad%2Fsalud%2Freto-desatender-salud-20200728102244-nt.html"
-            target="_blank"
-            class="flex"
-          >
+          {prensa.text1}
+          <a href={prensa.link} target="_blank" class="flex">
             <Link width="15" />
-            <span class="ml-1 hover:text-blueMedium">Enlace a la noticia</span>
+            <span class="ml-1 hover:text-blueMedium">{prensa.text2}</span>
           </a>
         </li>
       </ul>
@@ -155,18 +125,13 @@ import Link from "../icons/link.astro";
   <div
     class="px-6 py-20 my-24 md:p-24 text-center bg-blueMedium [&>span]:text-lg"
   >
-    <h2 class="mb-6 text-3xl font-dancing">OTRAS CURIOSIDADES SOBRE MÍ...</h2>
-    <span> Me encanta ser mamá, bendita revolución la maternidad </span>
+    <h2 class="mb-6 text-3xl font-dancing">{curiosidades.title}</h2>
+    <span> {curiosidades.text1} </span>
     <br />
-    <span> Mi estación favorita es el verano, me encanta la playa </span>
+    <span> {curiosidades.text2} </span>
     <br />
-    <span>
-      Adoro la música, Queen y Héroes del silencio me acompañan siempre
-    </span>
+    <span> {curiosidades.text3} </span>
     <br />
-    <span>
-      No era muy deportista hasta que descubrí el entrenamiento de fuerza, ahora
-      disfruto potenciando mi versión más sana y fuerte
-    </span>
+    <span> {curiosidades.text4} </span>
   </div>
 </Layout>
