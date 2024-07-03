@@ -2,7 +2,7 @@
 import ButtonContact from "../components/ButtonContact.astro";
 
 import { principal } from "../data.json";
-const { title, subtitle } = principal;
+const { title, subtitle1, subtitle2 } = principal;
 ---
 
 <div
@@ -13,7 +13,9 @@ const { title, subtitle } = principal;
       {title}
     </h1>
     <p class="mb-8 text-shadow text-gray-50 lg:text-brownDark">
-      {subtitle}
+      {subtitle1}
+      <br />
+      {subtitle2}
     </p>
     <ButtonContact />
   </div>
