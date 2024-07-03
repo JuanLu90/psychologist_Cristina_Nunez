@@ -1,11 +1,26 @@
 ---
+import Layout from "../layouts/Layout.astro";
 import Mail2 from "../icons/mail2.astro";
 import Form from "../icons/form.astro";
 import Whatsapp2 from "../icons/whatsapp2.astro";
-import Layout from "../layouts/Layout.astro";
+import ContactWithMe from "../icons/contactWithMe.astro";
+import PhoneCall from "../icons/phoneCall.astro";
+import SendDocuments from "../icons/sendDocuments.astro";
+import ReceiveDocuments from "../icons/receiveDocuments.astro";
 
 import { comoEmpezar } from "../data.json";
 const { title, steps } = comoEmpezar;
+
+interface IconsType {
+  [key: string]: any;
+}
+
+const icons: IconsType = {
+  ContactWithMe,
+  PhoneCall,
+  SendDocuments,
+  ReceiveDocuments,
+};
 ---
 
 <Layout title="¿Como puedo empezar?">
@@ -15,10 +30,13 @@ const { title, steps } = comoEmpezar;
   <div class="md:w-4/5 w-full m-auto p-6">
     {
       steps.map((step, index) => {
+        const IconComponent = icons[step.image];
+
         return (
           <div class="flex mb-6 flex-col md:flex-row items-center">
             <div class="flex justify-center p-12 flex-shrink-0 text-center">
-              <img src={step.image} alt="" width="222" height="170" />
+              <IconComponent />
+              {/* <img src={step.image} alt="" width="222" height="170" /> */}
             </div>
             <div class="flex flex-col items-center text-center md:items-start md:text-left">
               <span class="w-14 h-14 bg-brownLight text-brownMedium rounded-full flex justify-center text-5xl">
