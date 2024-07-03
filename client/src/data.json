@@ -54,11 +54,11 @@
     "text4": "Más tarde, me formé en trauma y apego. La terapia EMDR ha supuesto un antes y un después en mi ejercicio profesional. Actualmente, trabajo desde un enfoque integrador que me permite tener una visión global de la persona, incluyendo pasado, presente y futuro.",
     "formacion": {
       "title": "FORMACIÓN ESPECÍFICA",
-      "lista": [
+      "list": [
         "Grado en Psicología con mención en psicología clínica (Universidad de Málaga)",
         "Máster Propio Universitario en Atención Temprana “Dr. Miguel de Linares Pezzi\" (Universidad de Málaga)",
         "Máster en Psicología General Sanitaria (Universidad de Málaga)",
-        "Especialista en Terapias Contextuales (Universidad de Almería)",
+        "Especialist en Terapias Contextuales (Universidad de Almería)",
         "Instituto Español de EMDR-Protocolo estándar Nivel II",
         "Trauma complejo, apego y disociación: el trabajo con EMDR en la traumatización compleja (Asociación EMDR España)",
         "Jornada clínica: TLP Y Trastornos de la personalidad (Asociación EMDR España)",
@@ -67,25 +67,25 @@
     },
     "congresos": {
       "title": "PARTICIPACIÓN EN CONGRESOS",
-      "lista": [
+      "list": [
         "XII Congreso Internacional y XVII Nacional de Psicología Clínica: Comunicación titulada \"Evaluación del progreso terapéutico en un caso de trastorno de pánico con agorafobia\" cuyos autores son María del Carmen Castilejos Anguiano, Paloma Huertas Maestre, Cristina Nuñez Parra, Rafael Matas Vázquez y Berta Moreno Kustner"
       ]
     },
     "investigacion": {
       "title": "INVESTIGACIÓN",
-      "lista": [
+      "list": [
         "Beneficiaria de la beca de Iniciación a la Investigación del I Plan Propio de Investigación y Transferencia de la Universidad de Málaga. Desempeñando diversas tareas dentro del grupo de investigación \"Vulnerabilidad al Dolor Crónico\", dentro de la línea de Investigación “Trastorno de estrés postraumático y dolor crónico como entidades comórbidas: análisis de factores transdiagnósticos (TEPDOCRO)”"
       ]
     },
     "publicaciones": {
       "title": "PUBLICACIONES",
-      "lista": [
+      "list": [
         "III Jornadas de Investigación de la Facultad de Psicología y Logopedia de la Universidad de Málaga: \"Validación española de la versión breve de la Escala de Intolerancia a la Incertidumbre (IUS-12-VE) en pacientes con dolor crónico musculoesquelético\""
       ]
     },
     "reconocimiento": {
       "title": "RECONOCIMIENTO",
-      "lista": [
+      "list": [
         "Matrícula de honor en el Trabajo Fin de Máster en Psicología General Sanitaria"
       ]
     },
@@ -102,5 +102,14 @@
       "text3": "Adoro la música, Queen y Héroes del silencio me acompañan siempre",
       "text4": "No era muy deportista hasta que descubrí el entrenamiento de fuerza, ahora disfruto potenciando mi versión más sana y fuerte"
     }
+  },
+  "supervisiones": {
+    "text1": "Las supervisiones online ofrecen un espacio dónde compartir dudas, adquirir recursos y entrenar habilidades terapéuticas para un mejor desempeño profesional. A veces, nos centraremos en casos concretos y seguiremos su evolución, en otras ocasiones podremos el foco en estudiar y reflexionar sobre aquellas variables transdiagnósticas que nos ayudarán en nuestra práctica y, otras muchas, te ayudaré a identificar qué aspectos personales pueden estar activándose ante un tipo determinado de paciente. Por último, y no menos importante, se trata de un espacio dónde sostener y cuidar al terapeuta en un labor que, a veces, puede resultar muy solitaria. Si deseas ponerte en contacto conmigo para agendar una supervisión debes tener en cuenta que:",
+    "list": [
+      "Las supervisiones van dirigidas a terapeutas de menos de 5 años de experiencia o que hayan tenido una pausa en su labor profesional y quieran retomar de nuevo.",
+      "Puede solicitarse de manera individual o en grupos reducidos, esto último estará sujeto a disponibilidad.",
+      "La supervisión individual es de una hora de duración. Aunque va a depender en gran medida de las dudas que tengas a cerca de los casos, supervisar un par de casos suele ser lo habitual.",
+      "Antes de la supervisión, os enviaré un breve formulario que nos ayudará a organizar la información de los casos que vamos a tratar. Por ello, siempre os pido que me lo envíes con varios días de antelación."
+    ]
   }
 }

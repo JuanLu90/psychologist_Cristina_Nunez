@@ -1,6 +1,8 @@
 ---
 import Square from "../icons/square.astro";
 import Layout from "../layouts/Layout.astro";
+
+import { supervisiones } from "../data.json";
 ---
 
 <Layout title="Supervisiones">
@@ -12,42 +14,17 @@ import Layout from "../layouts/Layout.astro";
     <div
       class="w-full md:w-1/2 md:mx-12 mt-6 md:mt-0 flex flex-col justify-center"
     >
-      Las supervisiones online ofrecen un espacio dónde compartir dudas,
-      adquirir recursos y entrenar habilidades terapéuticas para un mejor
-      desempeño profesional. A veces, nos centraremos en casos concretos y
-      seguiremos su evolución, en otras ocasiones podremos el foco en estudiar y
-      reflexionar sobre aquellas variables transdiagnósticas que nos ayudarán en
-      nuestra práctica y, otras muchas, te ayudaré a identificar qué aspectos
-      personales pueden estar activándose ante un tipo determinado de paciente.
-      Por último, y no menos importante, se trata de un espacio dónde sostener y
-      cuidar al terapeuta en un labor que, a veces, puede resultar muy
-      solitaria. Si deseas ponerte en contacto conmigo para agendar una
-      supervisión debes tener en cuenta que:
+      {supervisiones.text1}
 
       <ul class="max-w-md space-y-1 list-disc list-inside mt-6">
-        <li class="flex">
-          <Square width="15" />
-          Las supervisiones van dirigidas a terapeutas de menos de 5 años de experiencia
-          o que hayan tenido una pausa en su labor profesional y quieran retomar
-          de nuevo.
-        </li>
-        <li class="flex">
-          <Square width="15" />
-          Puede solicitarse de manera individual o en grupos reducidos, esto último
-          estará sujeto a disponibilidad.
-        </li>
-        <li class="flex">
-          <Square width="15" />
-          La supervisión individual es de una hora de duración. Aunque va a depender
-          en gran medida de las dudas que tengas a cerca de los casos, supervisar
-          un par de casos suele ser lo habitual.
-        </li>
-        <li class="flex">
-          <Square width="15" />
-          Antes de la supervisión, os enviaré un breve formulario que nos ayudará
-          a organizar la información de los casos que vamos a tratar. Por ello, siempre
-          os pido que me lo envíes con varios días de antelación.
-        </li>
+        {
+          supervisiones.list.map((supervision) => (
+            <li class="flex">
+              <Square width="15" />
+              {supervision}
+            </li>
+          ))
+        }
       </ul>
     </div>
   </div>
