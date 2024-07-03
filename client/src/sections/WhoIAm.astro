@@ -1,33 +1,26 @@
 ---
-
+import { whoIAm } from "../data.json";
+const { title, text1, text2, text3, text4 } = whoIAm;
 ---
 
 <div class="p-8 [&>p]:text-lg">
   <h2 class="font-bold text-2xl">
-    <span class="text-5xl">❝</span>&nbsp;&nbsp;Soy Cristina Núñez, Psicóloga
-    General Sanitaria y Terapeuta EMDR.
+    <span class="text-5xl">❝</span>&nbsp;&nbsp;{title}
   </h2>
   <br />
   <p>
-    Te doy la bienvenida a este espacio dónde puedes conocer mejor cómo trabajo
-    y qué puedes esperar si inicias un proceso terapéutico conmigo.
+    {text1}
   </p>
   <br />
   <p>
-    Hoy sabemos que la relación terapéutica se inicia desde el momento en el que
-    podemos ponerle cara a la persona que nos va a acompañar, desde que podemos
-    ponerle voz, cuando tenemos información de esa persona, etc. Ese es el
-    objetivo de crear este espacio, que podáis conocerme más y mejor antes de
-    que nos veamos detrás de la pantalla.
+    {text2}
   </p>
   <br />
   <p>
-    El proceso terapéutico es todo un viaje en el que yo estaré encantada de
-    acompañarte desde la autenticidad e interés genuino.
+    {text3}
   </p>
   <br />
   <p>
-    ¿Te animas a emprender este viaje?&nbsp;&nbsp;<span class="text-5xl">❞</span
-    >
+    {text4}&nbsp;&nbsp;<span class="text-5xl">❞</span>
   </p>
 </div>

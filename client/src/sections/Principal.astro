@@ -1,8 +1,8 @@
 ---
 import ButtonContact from "../components/ButtonContact.astro";
 
-import { colors } from "../util";
-const { brownDark } = colors;
+import { principal } from "../data.json";
+const { title, subtitle } = principal;
 ---
 
 <div
@@ -10,17 +10,16 @@ const { brownDark } = colors;
 >
   <div class="lg:w-[30vw] ml-30">
     <h1 class="text-4xl text-gray-50 mb-5 italic text-shadow">
-      "Cuando una herida cicatriza, puede nacer algo nuevo"
+      {title}
     </h1>
     <p class="mb-8 text-shadow text-gray-50 lg:text-brownDark">
-      Terapia psicológica con enfoque integrador. <br /> Trabajo centrado en trauma
-      y apego desde una mirada compasiva
+      {subtitle}
     </p>
     <ButtonContact />
   </div>
 </div>
 
-<style define:vars={{ brownDark }}>
+<style>
   .principalWrapper {
     background-image: url("/img/portada.png");
     background-position: top center;
