@@ -1,8 +1,13 @@
-import { defineConfig } from 'astro/config';
-
+import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
+import sitemap from "astro-sitemap";
 
-// https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind()]
+  site: "https://www.cristinapsico.com", // Especifica tu sitio aquí
+  integrations: [
+    tailwind(),
+    sitemap({
+      site: "https://www.cristinapsico.com",
+    }),
+  ],
 });

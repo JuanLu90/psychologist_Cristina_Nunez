@@ -8,13 +8,18 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+const imageUrl = "/img/logo.png";
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta
+      name="description"
+      content="Un espacio seguro donde acompañarte desde la honestidad, sentido de la responsabilidad y profesionalidad."
+    />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
@@ -25,7 +30,53 @@ const { title } = Astro.props;
       rel="stylesheet"
     />
     <title>{title} - Psicóloga - Cristina Nuñez Parra</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.cristinapsico.com" />
+    <meta property="og:title" content={title} />
+    <meta
+      property="og:description"
+      content="Un espacio seguro donde acompañarte desde la honestidad, sentido de la responsabilidad y profesionalidad."
+    />
+    <meta property="og:image" content={imageUrl} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.cristinapsico.com" />
+    <meta property="twitter:title" content={title} />
+    <meta
+      property="twitter:description"
+      content="Un espacio seguro donde acompañarte desde la honestidad, sentido de la responsabilidad y profesionalidad."
+    />
+    <meta property="twitter:image" content={imageUrl} />
+
     <!-- <ViewTransitions /> -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Cristina Nuñez Parra",
+        "url": "https://www.cristinapsico.com",
+        "image": "https://www.cristinapsico.com/img/portada.png",
+        "jobTitle": "Psicóloga",
+        "description": "Un espacio seguro donde acompañarte desde la honestidad, sentido de la responsabilidad y profesionalidad.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Málaga",
+          "addressRegion": "Andalucía",
+          "addressCountry": "ES"
+        },
+        "sameAs": ["https://www.instagram.com/cristinapsicologaonline"],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+34-680-260-412",
+          "contactType": "Customer Service",
+          "areaServed": "ES",
+          "availableLanguage": ["Spanish"]
+        }
+      }
+    </script>
   </head>
   <body class="font-serif bg-gray-50">
     <Header />
